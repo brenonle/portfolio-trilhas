@@ -1,0 +1,186 @@
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #08080c;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+}
+
+/* Vídeo de fundo */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Fundo levemente preto */
+.mascara-escura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}
+
+/* Card principal */
+.card {
+    background: rgba(15, 15, 22, 0.78);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* Card largo (Sobre e Projetos) */
+.card-largo {
+    max-width: 580px;
+    padding: 32px;
+}
+
+/* Foto e textos */
+.foto-perfil {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.subtitulo {
+    font-size: 12px;
+    color: #cccccc;
+    margin-bottom: 22px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+.botao {
+    display: block;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.2s;
+}
+
+.botao:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #a855f7;
+}
+
+.botao-voltar {
+    max-width: 160px;
+    margin: 22px auto 0 auto;
+}
+
+/* Texto Sobre Mim */
+.texto-sobre {
+    text-align: justify;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #e2e2e2;
+}
+
+.texto-sobre h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.texto-sobre p {
+    margin-bottom: 12px;
+}
+
+/* Cards de projetos */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.card-projeto {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: left;
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.card-projeto a {
+    color: #ffffff;
+    font-size: 12.5px;
+    text-decoration: underline;
+}
+
+/* Redes sociais */
+.redes-sociais {
+    margin-top: 12px;
+    background: rgba(15, 15, 22, 0.78);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 12px 28px;
+    display: flex;
+    gap: 22px;
+}
+
+.redes-sociais a {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Celular */
+@media (max-width: 520px) {
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+}
